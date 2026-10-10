@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Sort | Smart Local File Organizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <meta name="description" content="A cross-platform, privacy-first desktop automation script that performs local semantic classification, visual duplicate detection, and time-based archiving.">
+</head>
+<body>
+    <div class="glass-bg"></div>
+    <header class="navbar">
+        <div class="logo">Shadow Sort</div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="https://github.com" class="btn-primary" target="_blank" id="repo-link">View on GitHub</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 class="gradient-text">Intelligent File Organization. <br>Zero Cloud Dependency.</h1>
+            <p class="subtitle">Semantic text classification, perceptual image clustering, and time-based archiving. 100% local and privacy-first.</p>
+            <div class="cta-group">
+                <a href="#setup" class="btn-primary btn-large">Get Started</a>
+                <a href="#features" class="btn-secondary btn-large">Learn More</a>
+            </div>
+            <div class="mockup-container">
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="prompt">$</span> shadow-sort --run</p>
+                        <p class="log success">✓ Phase 1: Semantic Sorting complete.</p>
+                        <p class="log success">✓ Phase 2: Perceptual Image Clustering complete.</p>
+                        <p class="log success">✓ Phase 3: Developer Project Detection complete.</p>
+                        <p class="log success">✓ Phase 4: Time-Decay Archiving complete.</p>
+                        <p class="log highlight">Organization complete. 120 files sorted securely.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Core Capabilities</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon">🧠</div>
+                    <h3>Semantic Sorting</h3>
+                    <p>Uses local zero-shot NLP models (Hugging Face) to understand document content and route files to topic-specific folders.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🖼️</div>
+                    <h3>Visual Clustering</h3>
+                    <p>Identifies visually similar and duplicate images using perceptual hashing, grouping them for easy review without deleting them.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🕰️</div>
+                    <h3>Time-Decay Archive</h3>
+                    <p>Automatically compresses and archives files that have been untouched for months, saving disk space while maintaining an index.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">💻</div>
+                    <h3>Project Detection</h3>
+                    <p>Finds developer folders (node_modules, .venv) and relocates heavy projects to a dedicated workspace to declutter your Downloads.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="setup" class="setup">
+            <h2>Easy Setup</h2>
+            <div class="setup-steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h4>Clone & Install</h4>
+                        <code>git clone https://github.com/yourusername/shadow-sort<br>pip install -r requirements.txt</code>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h4>Configure</h4>
+                        <p>Tweak labels, confidence thresholds, and retention periods in <code>config.yaml</code>.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h4>Run Locally</h4>
+                        <code>python src/cli.py --path ~/Downloads</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with ❤️ for privacy and organization. Open source under MIT License.</p>
+    </footer>
+
+    <script>
+        // Update repo link dynamically based on the current github pages URL
+        window.onload = () => {
+            const hostname = window.location.hostname;
+            if (hostname.endsWith('.github.io')) {
+                const username = hostname.split('.')[0];
+                const repo = window.location.pathname.split('/')[1] || 'shadow-sort';
+                document.getElementById('repo-link').href = `https://github.com/${username}/${repo}`;
+            }
+        };
+    </script>
+</body>
+</html>

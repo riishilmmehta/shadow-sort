@@ -1,0 +1,40 @@
+# Smart Local File Organizer Configuration
+
+# Semantic Sorting
+semantic_sort:
+  # The model to use. For lighter memory usage, try "setfit/sentence-transformers"
+  model_name: "facebook/bart-large-mnli"
+  labels:
+    - "University"
+    - "Personal"
+    - "Finance"
+    - "Work"
+  confidence_threshold: 0.75
+  needs_review_folder_name: "Needs_Review"
+
+# Image Clustering
+image_cluster:
+  hash_size: 8
+  hash_method: "phash"
+  similarity_threshold: 5
+  review_folder_name: "Duplicates_Review"
+
+# Time Archiver
+time_archiver:
+  days_untouched: 60
+  # Set to "mtime" or "atime". atime is unreliable on some filesystems.
+  timestamp_method: "mtime"
+  archive_prefix: "Archive_"
+
+# Dependency Detector
+dependency_detector:
+  markers:
+    - "node_modules"
+    - ".venv"
+    - "venv"
+    - "target"
+    - ".git"
+    - "package.json"
+    - "requirements.txt"
+    - ".csproj"
+  project_folder_name: "Developer/Projects"

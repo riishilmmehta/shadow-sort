@@ -1,0 +1,12 @@
+transformers
+sentence-transformers
+imagehash
+Pillow
+python-docx
+pyyaml
+pydantic-settings
+click
+typer
+pytest
+pytest-mock
+pytest-cov
