@@ -10,3 +10,4 @@ typer
 pytest
 pytest-mock
 pytest-cov
+streamlit
