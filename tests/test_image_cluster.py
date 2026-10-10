@@ -1,7 +1,8 @@
-import imagehash
 from pathlib import Path
+
 from src.core.config import ImageClusterConfig
 from src.modules.image_cluster import ImageClusterer
+
 
 class MockImageHash:
     def __init__(self, value):

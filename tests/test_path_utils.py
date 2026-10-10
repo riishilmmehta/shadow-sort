@@ -1,6 +1,7 @@
-import platform
 from pathlib import Path
-from src.core.path_utils import get_downloads_path, get_documents_path, get_home_path
+
+from src.core.path_utils import get_documents_path, get_downloads_path
+
 
 def test_get_downloads_path_windows(mocker):
     mocker.patch('platform.system', return_value='Windows')

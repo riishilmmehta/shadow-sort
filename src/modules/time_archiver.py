@@ -1,8 +1,7 @@
-import os
 import json
 import zipfile
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
-from datetime import datetime, timezone, timedelta
 
 from src.core.config import TimeArchiverConfig
 from src.logger import setup_logger
@@ -22,7 +21,7 @@ class TimeArchiver:
 
     def archive_old_files(self, directory: Path, dry_run: bool = False):
         """Archives files untouched for a configured number of days."""
-        now = datetime.now(timezone.utc)
+        now = datetime.now(UTC)
         cutoff_date = now - timedelta(days=self.config.days_untouched)
         cutoff_timestamp = cutoff_date.timestamp()
 

@@ -1,5 +1,6 @@
 import shutil
 from pathlib import Path
+
 from src.core.config import DependencyDetectorConfig
 from src.core.move_log import MoveLogger
 from src.core.path_utils import get_home_path
@@ -80,4 +81,4 @@ class DependencyDetector:
             else:
                 logger.info(f"[DRY RUN] Would move {project_dir.name} to {target_projects_dir}/")
                 
-import os # Ensure os is imported for walk
+import os  # Ensure os is imported for walk

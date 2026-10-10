@@ -1,6 +1,7 @@
 import json
+from datetime import UTC, datetime
 from pathlib import Path
-from datetime import datetime, timezone
+
 
 class MoveLogger:
     def __init__(self, log_path: Path):
@@ -9,7 +10,7 @@ class MoveLogger:
 
     def log_move(self, source: Path, destination: Path):
         self.moves.append({
-            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "timestamp": datetime.now(UTC).isoformat(),
             "source": str(source.absolute()),
             "destination": str(destination.absolute())
         })

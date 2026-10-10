@@ -1,7 +1,8 @@
 import json
-import zipfile
 import shutil
+import zipfile
 from pathlib import Path
+
 from src.logger import setup_logger
 
 logger = setup_logger("restorer")
@@ -40,7 +41,7 @@ def undo_moves(log_path: Path):
     log_path.unlink()
     logger.info("Undo complete. Log cleared.")
 
-def restore_archive(directory: Path, archive_name: str = None):
+def restore_archive(directory: Path, archive_name: str | None = None):
     """Restores files from a specific archive, or all archives if None."""
     manifest_path = directory / "archive_manifest.json"
     if not manifest_path.exists():

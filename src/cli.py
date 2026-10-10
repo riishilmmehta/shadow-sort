@@ -1,14 +1,16 @@
-import typer
 from pathlib import Path
+
+import typer
+
 from src.core.config import load_config
-from src.core.path_utils import get_downloads_path, get_documents_path
-from src.modules.semantic_sort import SemanticSorter
-from src.modules.image_cluster import ImageClusterer
-from src.modules.time_archiver import TimeArchiver
-from src.modules.dep_detector import DependencyDetector
 from src.core.move_log import MoveLogger
-from src.restore import undo_moves
+from src.core.path_utils import get_downloads_path
 from src.logger import setup_logger
+from src.modules.dep_detector import DependencyDetector
+from src.modules.image_cluster import ImageClusterer
+from src.modules.semantic_sort import SemanticSorter
+from src.modules.time_archiver import TimeArchiver
+from src.restore import undo_moves
 
 app = typer.Typer(help="Smart Local File Organizer ('Shadow Sort')")
 

@@ -1,8 +1,8 @@
 import shutil
 from pathlib import Path
-from typing import Optional
-from transformers import pipeline
+
 import docx
+from transformers import pipeline
 
 from src.core.config import SemanticSortConfig
 from src.core.move_log import MoveLogger
@@ -18,7 +18,7 @@ class SemanticSorter:
         self.classifier = pipeline("zero-shot-classification", model=self.config.model_name)
         logger.info("Model loaded successfully.")
 
-    def extract_text(self, file_path: Path) -> Optional[str]:
+    def extract_text(self, file_path: Path) -> str | None:
         """Extracts text from .txt, .md, or .docx files."""
         try:
             if file_path.suffix.lower() in ['.txt', '.md']:

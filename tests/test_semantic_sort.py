@@ -1,6 +1,6 @@
-from pathlib import Path
 from src.core.config import SemanticSortConfig
 from src.modules.semantic_sort import SemanticSorter
+
 
 class MockClassifier:
     def __init__(self, confidence):
