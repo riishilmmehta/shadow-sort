@@ -1,6 +1,7 @@
+
 import yaml
-from pathlib import Path
 from pydantic_settings import BaseSettings
+
 
 class SemanticSortConfig(BaseSettings):
     model_name: str

@@ -1,6 +1,7 @@
-from pathlib import Path
 import os
 import platform
+from pathlib import Path
+
 
 def get_downloads_path() -> Path:
     """Returns the path to the current user's Downloads directory across OSes."""

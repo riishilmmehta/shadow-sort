@@ -1,6 +1,7 @@
 import logging
 import sys
 
+
 def setup_logger(name: str, verbose: bool = False) -> logging.Logger:
     logger = logging.getLogger(name)
     logger.setLevel(logging.DEBUG if verbose else logging.INFO)
